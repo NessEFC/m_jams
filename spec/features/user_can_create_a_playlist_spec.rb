@@ -3,22 +3,6 @@ require 'rails_helper'
 RSpec.feature "User can create a playlist" do
   scenario "and they see the playlist show page" do
 
-    # As a User
-    # When I am on the homepage
-    # And I click on "Make Some Sweet Jams"
-    # I should see the form for a new playlist
-    # And I should fill in information for the playlist name
-    # And I should fill in information for the playlist description
-    # And I click "Start Jammin' It Out"
-    # Then I should see the playlist show page
-    # And I expect to see the playlist name
-    # And I expect to see the plalylist description
-    # And I expect to see the creator's username
-    # And I expect to see when the playlist was created
-    # And I expect to see the number of songs in the playlist at 0
-    # Also, do the sad path
-
-
     playlist_name = "Crud"
     playlist_description = "Cruddin' it out to all the latest hits."
     playlist_created_at = "April 10, 2017"

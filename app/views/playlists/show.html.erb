@@ -1,4 +1,11 @@
 <h1><%= @playlist.name %></h1>
-<h3>Playlist Description: <%= @playlist.description %></h3>
+<h3>Description: <%= @playlist.description %></h3>
 <h4>Created: <%= @playlist.created_at.strftime("%B %e, %Y") %></h4>
-<h4>Songs in the Queue: 0</h4>
+<h4>Songs in the Queue: <%= @playlist.songs.count %></h4>
+<%= link_to "Contribute a Jam", new_playlist_song_path(@playlist) %>
+
+<ul>
+  <% @playlist.songs.each_with_index do |song, n| %>
+    <p><%= "#{n + 1}) " %><strong>Artist: </strong><%= song.artist %><strong> Song Title: </strong><%= link_to song.title, song.url %></p>
+  <% end %>
+</ul>
